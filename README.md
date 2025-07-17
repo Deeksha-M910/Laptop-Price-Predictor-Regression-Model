@@ -8,8 +8,7 @@ The model is trained on a dataset of laptop specifications and prices. It uses p
 
 ## 🚀 Live Demo
 
-👉 [Click here to try the app](https://your-deployment-link.com)  
-_(Replace with actual link if deployed)_
+👉 [Click here to try the app](https://laptop-price-predictor-regression-model-deeksha.streamlit.app/)  
 
 ## 📊 Features
 
@@ -29,19 +28,21 @@ Users can choose:
 
 The app then predicts the price based on the selected configuration.
 
+
 ## 📁 Dataset
 
-- Source: Self-curated dataset of laptop specifications and prices.
-- Format: CSV
-- Total Rows: ~1,300
+- **Source:** Public dataset of laptop specifications and prices (exact source unknown).
+- **Format:** CSV
+- **Total Records:** Approximately 1,300 laptops
 
-## 🧠 Model
+## 🧠 Model & Evaluation
 
-- Model: Gradient Boosting Regressor (via `XGBoost`)
-- Pipeline: Includes `ColumnTransformer` with OneHotEncoding and numeric passthrough
-- Evaluation:  
-  - **R² Score**: ~0.90  
-  - **MAE**: ~0.14
+- **Final Model:** XGBoost Regressor (after testing multiple regression algorithms)
+- **Preprocessing:** Pipeline with `ColumnTransformer` for encoding and numeric handling
+- **Evaluation Metrics:**
+  - **R² Score:** ~0.90
+  - **MAE:** ~0.14
+
 
 ## 🛠 Tech Stack
 
@@ -52,34 +53,16 @@ The app then predicts the price based on the selected configuration.
 - Pandas, NumPy — for data manipulation and preparation
 - Matplotlib, Seaborn — for exploratory data analysis (EDA) and visualization
 
+
 ## 🗂 Project Structure
 
-├── app.py # Streamlit web app
-├── df.pkl # Cleaned DataFrame used in app
-├── pipe.pkl # Trained ML pipeline (preprocessing + model)
-├── laptop_data.csv # Original data
-├── requirements.txt # Python dependencies
-├── setup.sh # Deployment setup script
-├── laptop-price-predictor.ipynb # Jupyter notebook (EDA + training)
-
-
-## ⚙️ Setup Instructions
-
-1. Clone the repository  
-   `git clone https://github.com/yourusername/laptop-price-predictor.git`
-
-2. Install dependencies  
-   `pip install -r requirements.txt`
-
-3. Run the app  
-   `streamlit run app.py`
-
-
-
-## 🧑‍💻 Author
-
-**[Deeksha More]**  
-_Data Scientist | Machine Learning Enthusiast_
+- **app.py**: Streamlit web application
+- **df.pkl**: Preprocessed DataFrame used in the app
+- **pipe.pkl**: Trained machine learning pipeline (preprocessing + model)
+- **laptop_data.csv**: Dataset of laptop specifications and prices
+- **requirements.txt**: Python dependencies
+- **setup.sh**: Deployment setup script
+- **laptop-price-predictor.ipynb**: Jupyter Notebook for EDA and model training
 
 ---
 
